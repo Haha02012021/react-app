@@ -1,0 +1,45 @@
+@mixin flexbox($display: flex, $justify-content: inherit, $align-items: center, $flex-wrap: inherit, $flex-direction: inherit, $gap: 0) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: $display;
+    -webkit-box-pack: $justify-content;
+    -ms-flex-pack: $justify-content;
+    justify-content: $justify-content;
+    -webkit-box-align: $align-items;
+    -ms-flex-align: $align-items;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    -ms-flex-wrap: $flex-wrap;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $flex-direction;
+    flex-direction: $flex-direction;
+    gap: $gap;
+
+    @if $flex-direction ==row {
+        -webkit-box-orient: horizontal;
+    }
+
+    @else {
+        -webkit-box-orient: vertical;
+    }
+
+    @if $justify-content ==space-between {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    }
+
+    @else if $justify-content ==space-around {
+        -ms-flex-pack: distribute;
+    }
+
+    @content;
+}
+
+@mixin grid($grid-template-columns: none, $gap: inherit, $row-gap: inherit) {
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    gap: $gap;
+    row-gap: $row-gap;
+
+    @content;
+}

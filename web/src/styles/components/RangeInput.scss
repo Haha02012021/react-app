@@ -1,0 +1,98 @@
+@use "../base/variables" as *;
+
+.range-input {
+    position: relative;
+    margin-top: 1.5rem;
+    color: #21243d;
+    font-size: .75rem;
+
+    &__rail {
+        cursor: pointer;
+        height: 3px;
+        width: 100%;
+        background-color: rgba($color: $arsenic-color, $alpha: $opacity-8);
+        border-radius: 3px;
+        position: absolute;
+    }
+
+    &__active {
+        background: #e2a400;
+        height: 100%;
+    }
+
+    &__input {
+        cursor: pointer;
+        height: 3px;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: transparent;
+        border-radius: 3px;
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+
+        &::-webkit-slider-thumb {
+            cursor: -webkit-grab;
+            cursor: grab;
+            -webkit-appearance: none;
+                    appearance: none;
+            height: 16px;
+            width: 16px;
+            z-index: 1;
+            background: -webkit-gradient(linear, left top, left bottom, from($white-color), to($cultured-color));
+            background: linear-gradient($white-color, $cultured-color);
+            pointer-events: auto;
+            border-radius: 50%;
+            outline: none;
+            -webkit-box-shadow: $box-shadow-circle;
+                    box-shadow: $box-shadow-circle;
+        }
+
+        &:nth-child(1) {
+            &::-webkit-slider-thumb {
+                -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);
+            }
+        }
+
+        &:nth-child(2) {
+            &::-webkit-slider-thumb {
+                -webkit-transform: translateX(50%);
+                        transform: translateX(50%);
+            }
+        }
+    }
+
+    &__tick {
+        cursor: -webkit-grab;
+        cursor: grab;
+        text-align: center;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+                user-select: none;
+        font-size: .75rem;
+        font-weight: 700;
+        position: absolute;
+        top: -28px;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+
+        &:nth-child(1) {
+            left: 0%;
+        }
+
+        &:nth-child(2) {
+            left: 100%;
+        }
+    }
+
+    &__text-prefix {
+        color: $mustard-yellow-color;
+    }
+}

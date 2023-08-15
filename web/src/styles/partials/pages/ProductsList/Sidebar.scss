@@ -1,0 +1,14 @@
+@use "../../../base/mixins" as *;
+
+.sidebar {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    max-width: 260px;
+
+    &__clear {
+        font-size: .75rem;
+        cursor: pointer;
+        @include flexbox($gap: 8px)
+    }
+}

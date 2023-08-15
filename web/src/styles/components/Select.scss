@@ -1,0 +1,16 @@
+@use "../base/mixins" as *;
+
+.select {
+    @include flexbox($align-items: center);
+
+    &__select {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        color: #21243d;
+        background: 0 0;
+        border: none;
+        font-family: inherit;
+        font-size: .75rem;
+    }
+}

@@ -1,0 +1,7 @@
+@use "../base/variables" as *;
+
+.text-with-mark {
+    &__mark {
+        background-color: rgba($color: $mustard-yellow-color, $alpha: $opacity-40);
+    }
+}

@@ -1,0 +1,27 @@
+@use "../../../base/mixins" as *;
+
+.product-cards {
+    width: 100%;
+
+    .container-header {
+        @include flexbox($justify-content: end);
+
+        .select {
+            &__select {
+                min-width: 100px;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+        -webkit-padding-start: 0;
+                padding-inline-start: 0;
+        @include grid($grid-template-columns: repeat(4, minmax(0, 1fr)), $gap: 40px);
+    }
+
+    &__pagination {
+        width: 100%;
+        @include flexbox($justify-content: center)
+    }
+}

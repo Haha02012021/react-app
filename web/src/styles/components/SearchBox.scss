@@ -1,0 +1,56 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+.search-box {
+    &__form {
+        height: 100%;
+        position: relative;
+    }
+
+    &__input {
+        border: 0;
+        font-family: $font-family-hind;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        color: rgba($color: $yankees-blue-color, $alpha: $opacity-80);
+        width: 100%;
+        outline: none;
+    }
+
+    &__submit {
+        background-color: transparent;
+        border: 0;
+        height: 100%;
+        left: 0;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        position: absolute;
+    }
+
+    &__reset,
+    &__loading {
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        height: 100%;
+        width: 48px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        right: 0;
+        display: none;
+    }
+
+    &__loading,
+    &__reset {
+        &--active {
+            @include flexbox($justify-content: center)
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.pagination {
+    list-style: none;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    @include flexbox();
+
+    &__item {
+        height: 38px;
+        width: 38px;
+        color: #414247;
+        background-color: rgba($color: $arsenic-color, $alpha: $opacity-8);
+        border-radius: 4px;
+        margin-right: 4px;
+        cursor: pointer;
+        @include flexbox($justify-content: center, $align-items: center);
+
+        &--pre,
+        &--next {
+            background: 0 0;
+        }
+
+        &--pre {
+            margin-right: 1rem;
+        }
+
+        &--next {
+            margin-left: 1rem;
+        }
+
+        &--active {
+            background-color: #e2a400;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($color: $white-color, $alpha: $opacity-34)), to(rgba($color: $white-color, $alpha: $opacity-0)));
+            background-image: -o-linear-gradient(rgba($color: $white-color, $alpha: $opacity-34), rgba($color: $white-color, $alpha: $opacity-0));
+            background-image: linear-gradient(rgba($color: $white-color, $alpha: $opacity-34), rgba($color: $white-color, $alpha: $opacity-0));
+            font-weight: $font-weight-bold;
+            color: $white-color;
+        }
+    }
+}

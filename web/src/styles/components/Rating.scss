@@ -1,0 +1,38 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.rating {
+    padding-bottom: 1rem;
+    opacity: $opacity-50;
+
+    &--active {
+        opacity: $opacity-100;
+    }
+
+    @include flexbox();
+
+    .star-icon {
+        margin-right: .5rem;
+
+        &--fill {
+            fill: $mustard-yellow-color;
+        }
+
+        &--empty {
+            fill: rgba($color: $black-color, $alpha: $opacity-8);
+        }
+    }
+
+    &__amount {
+        color: rgba($color: $yankees-blue-color, $alpha: $opacity-80);
+        letter-spacing: 1.1px;
+        background-color: rgba($color: $arsenic-color, $alpha: $opacity-8);
+        border-radius: 4px;
+        margin-left: 8px;
+        padding: 0 4px;
+        font-size: .64rem;
+        font-weight: 600;
+
+        @include flexbox($display: inline-flex)
+    }
+}

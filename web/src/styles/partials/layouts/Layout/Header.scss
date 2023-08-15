@@ -1,0 +1,46 @@
+@use "../../../base/variables" as *;
+@use "../../../base/mixins" as *;
+
+.header {
+    background-image: url(../../../../assets/images/header-banner.png), -webkit-gradient(linear, left top, left bottom, from(#fbc300), to(#c98a00));
+    background-image: url(../../../../assets/images/header-banner.png), -o-linear-gradient(#fbc300, #c98a00);
+    background-image: url(../../../../assets/images/header-banner.png), linear-gradient(#fbc300, #c98a00);
+    padding: 0.5rem 1rem;
+    min-height: 368px;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    color: white;
+    @include flexbox($flex-direction: column, $align-items: center, $justify-content: center);
+
+    &__logo {
+        margin: 0;
+        width: 92px;
+        height: 24px;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: $font-weight-light;
+    }
+
+    .search-box {
+        width: 640px;
+
+        &__input {
+            -webkit-box-shadow: 0 4px 48px rgba($color: $white-color, $alpha: $opacity-20);
+                    box-shadow: 0 4px 48px rgba($color: $white-color, $alpha: $opacity-20);
+            padding: 4px 48px 0 64px;
+            font-size: .9rem;
+            border-radius: 8px;
+            min-height: 64px;
+        }
+
+        &__submit {
+            color: $mustard-yellow-color;
+            width: 64px;
+            padding: 0 1rem 0 2rem;
+        }
+    }
+}

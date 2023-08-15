@@ -1,0 +1,76 @@
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../../assets/fonts/OpenSans-Light.ttf);
+    font-weight: $font-weight-light;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../../assets/fonts/OpenSans-Regular.ttf);
+    font-weight: $font-weight-regular;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../../assets/fonts/OpenSans-SemiBold.ttf);
+    font-weight: $font-weight-semibold;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../../assets/fonts/OpenSans-Bold.ttf);
+    font-weight: $font-weight-bold;
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url(../../assets/fonts/Hind-Light.ttf);
+    font-weight: $font-weight-light;
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url(../../assets/fonts/Hind-Regular.ttf);
+    font-weight: $font-weight-regular;
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url(../../assets/fonts/Hind-SemiBold.ttf);
+    font-weight: $font-weight-semibold;
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url(../../assets/fonts/Hind-Bold.ttf);
+    font-weight: $font-weight-bold;
+}
+
+$font-family-open: 'Open Sans';
+$font-family-hind: 'Hind';
+
+$mustard-yellow-color: #E2A400;
+$arsenic-color: #414247;
+$white-color: #fff;
+$black-color: #000;
+$yankees-blue-color: #21243D;
+$cultured-color: #f5f5fa;
+
+$box-shadow-circle: 0 4px 11px rgba(37, 44, 97, .15), 0 2px 3px rgba(93, 100, 148, .2);
+
+$opacity-0: 0;
+$opacity-8: .08;
+$opacity-6: .06;
+$opacity-20: .2;
+$opacity-32: .32;
+$opacity-34: .34;
+$opacity-40: .4;
+$opacity-50: .5;
+$opacity-70: .7;
+$opacity-80: .8;
+$opacity-100: 1;

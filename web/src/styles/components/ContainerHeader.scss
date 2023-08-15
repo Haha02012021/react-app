@@ -1,0 +1,24 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.container-header {
+    min-height: 80px;
+    width: 100%;
+    @include flexbox($justify-content: space-between);
+
+    &__title {
+        font-family: $font-family-hind;
+        font-weight: $font-weight-bold;
+        font-size: 1.5rem;
+    }
+
+    &__header {
+        height: 80px;
+        width: 100%;
+        @include flexbox($justify-content: space-between)
+    }
+
+    &__actions {
+        @include flexbox($gap: 48px)
+    }
+}
